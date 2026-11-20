@@ -1,0 +1,37 @@
+@model ProductsClient.Models.AdminLoginViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Вход администратора — КАДР</title>
+    <link rel="stylesheet" href="~/booking.css" />
+    <style>
+        .login-card { max-width: 480px; margin: 70px auto; padding: 32px; border: 1px solid #363636; border-radius: 24px; background: #202020; }
+        .login-card button { width: 100%; margin-top: 22px; }
+        .login-error { color: #ff9a9a; }
+    </style>
+</head>
+<body>
+    <header><a class="brand" href="/">КАДР</a><a href="/">← На главную</a></header>
+    <main class="login-card">
+        <p class="eyebrow">АДМИНИСТРАТИВНАЯ ПАНЕЛЬ</p>
+        <h1>Вход</h1>
+        <p>Войдите, чтобы просматривать заявки.</p>
+        @if (!string.IsNullOrEmpty(Model.Error))
+        {
+            <p class="login-error" role="alert">@Model.Error</p>
+        }
+        <form method="post" action="/admin/login">
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(false, "", new { @class = "login-error" })
+            <label for="Email">Электронная почта<input id="Email" name="Email" type="email" value="@Model.Email" autocomplete="username" required maxlength="254" /></label>
+            <label for="Password">Пароль<input id="Password" name="Password" type="password" autocomplete="current-password" required maxlength="256" /></label>
+            <button type="submit">Войти</button>
+        </form>
+    </main>
+</body>
+</html>

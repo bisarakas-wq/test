@@ -1,0 +1,19 @@
+@model ProductsClient.Models.SitePageViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="/booking.css" />
+    <link rel="stylesheet" href="/css/site-footer.css" />
+    <script src="/booking.js" defer></script>
+</head>
+<body>
+    @Html.Raw(Model.BodyContent)
+    <partial name="~/Views/Shared/_Footer.cshtml" />
+</body>
+</html>

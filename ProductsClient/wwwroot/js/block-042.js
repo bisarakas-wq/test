@@ -1,0 +1,1 @@
+(function() {var isSafariOnIOS=!!navigator.userAgent.match(/iP(hone|od|ad)/)&&navigator.userAgent.match(/WebKit/i)&&!navigator.userAgent.match(/CriOS/i)&&!navigator.userAgent.match(/FxiOS/i);if(!isSafariOnIOS) return;var recid='rec1195444226';var rec=document.getElementById(recid);if(!rec) return;rec.classList.add('safari');})();

@@ -1,0 +1,21 @@
+
+.noise .tn-atom {
+    background-size: 250px !important;
+    background-repeat: repeat !important;
+    pointer-events: none !important;
+}
+.noise {
+    pointer-events: none !important;
+    z-index: 99999999 !important ;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    mix-blend-mode: screen;
+}
+@media(max-width:480px) {
+    .noise {
+    height: 120vh !important;
+}
+}

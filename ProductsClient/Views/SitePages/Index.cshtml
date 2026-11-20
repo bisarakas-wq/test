@@ -1,0 +1,10 @@
+@model ProductsClient.Models.SitePageViewModel
+@{
+    Layout = "_Layout";
+}
+@section HeadContent {
+    @Html.Raw(Model.HeadContent)
+}
+<div class="legacy-page-content">
+    @Html.Raw(Model.BodyContent)
+</div>

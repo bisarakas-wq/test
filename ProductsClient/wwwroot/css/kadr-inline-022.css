@@ -1,0 +1,9 @@
+ 
+.tn-elem .t-slds__arrow { opacity: 0; width: 0px !important; height: 0px !important; } 
+.tc-left1, .tc-right1, .tc-left2, .tc-right2, .tc-left3, .tc-right3, .tc-left4, .tc-right4, .tc-left5, .tc-right5, .tc-left6, .tc-right6, .tc-left7, .tc-right7     { cursor: pointer; transition: transform 0.2s ease; } 
+.tc-left1:hover, .tc-right1:hover, .tc-left2:hover, .tc-right2:hover, .tc-left3:hover, .tc-right3:hover, .tc-left4:hover, .tc-right4:hover, .tc-left5:hover, .tc-right5:hover, .tc-left6:hover, .tc-right6:hover, .tc-left7:hover, .tc-right7:hover    { 
+    transform:scale(1.05);
+} 
+
+
+

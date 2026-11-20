@@ -1,0 +1,36 @@
+@model ProductsClient.Models.ErrorPageViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@Model.Title — КАДР</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { min-height: 100vh; margin: 0; display: grid; place-items: center; padding: 24px; background: #141414; color: #f4f4f4; font-family: Arial, sans-serif; }
+        main { width: min(560px, 100%); padding: 48px; border: 1px solid #363636; border-radius: 24px; background: #202020; }
+        .brand { color: #fff; font-size: 30px; font-weight: 900; letter-spacing: 3px; text-decoration: none; }
+        h1 { margin: 42px 0 12px; font-size: clamp(32px, 7vw, 48px); }
+        p { color: #bcbcbc; line-height: 1.7; }
+        .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+        .actions a, .actions button { padding: 13px 20px; border: 0; border-radius: 28px; background: #ffbf00; color: #151515; font: inherit; text-decoration: none; cursor: pointer; }
+        .actions button { background: #353535; color: #fff; }
+        @@media (max-width: 480px) { main { padding: 30px 24px; } }
+    </style>
+</head>
+<body>
+    <main>
+        <a class="brand" href="/" aria-label="КАДР — главная">КАДР</a>
+        <h1>@Model.Title</h1>
+        <p>@Model.Message</p>
+        <p>Код обращения: @Model.RequestId</p>
+        <div class="actions">
+            <a href="/">На главную</a>
+            <button type="button" onclick="window.location.reload()">Попробовать снова</button>
+        </div>
+    </main>
+</body>
+</html>

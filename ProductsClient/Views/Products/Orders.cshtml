@@ -1,0 +1,115 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Заказы — КАДР</title>
+    <link rel="stylesheet" href="~/booking.css" />
+    <script src="~/booking.js" defer></script>
+</head>
+<body>
+    <header>
+        <a class="brand" href="/">КАДР</a>
+        <a href="/">← На главную</a>
+    </header>
+
+    <main>
+        <section class="intro">
+            <p class="eyebrow">КАРАГАНДА · СТУДИЯ ПОДКАСТОВ И ВИДЕО</p>
+            <h1>Ваша идея.<br />Наше пространство.</h1>
+            <p>Выберите зал для подкаста, интервью или видеопроекта. Оформите заявку за несколько шагов.</p>
+            <a href="tel:8700000000">8700000000</a>
+        </section>
+
+        <section class="services" aria-label="Выбор зала">
+            <article>
+                <span class="number">01</span>
+                <div>
+                    <h2>Мэн Кейв / Циклорама</h2>
+                    <p>Интерьерная съёмка или чистый фон. От 3 часов.</p>
+                </div>
+                <div class="action">
+                    <strong>4 000 ₸ / час</strong>
+                    <button type="button" data-name="Мэн Кейв / Циклорама" data-price="4000" data-min="3">Выбрать</button>
+                </div>
+            </article>
+
+            <article>
+                <span class="number">02</span>
+                <div>
+                    <h2>Лофт</h2>
+                    <p>Тёплая атмосфера для интервью и разговорных проектов. От 2 часов.</p>
+                </div>
+                <div class="action">
+                    <strong>3 000 ₸ / час</strong>
+                    <button type="button" data-name="Лофт" data-price="3000" data-min="2">Выбрать</button>
+                </div>
+            </article>
+
+            <article>
+                <span class="number">03</span>
+                <div>
+                    <h2>Кафе</h2>
+                    <p>Камерное пространство для уютных бесед. От 2 часов.</p>
+                </div>
+                <div class="action">
+                    <strong>3 000 ₸ / час</strong>
+                    <button type="button" data-name="Кафе" data-price="3000" data-min="2">Выбрать</button>
+                </div>
+            </article>
+
+            <article>
+                <span class="number">04</span>
+                <div>
+                    <h2>Соло</h2>
+                    <p>Один автор, одна история. Для блогов и учебных записей. От 2 часов.</p>
+                </div>
+                <div class="action">
+                    <strong>3 000 ₸ / час</strong>
+                    <button type="button" data-name="Соло" data-price="3000" data-min="2">Выбрать</button>
+                </div>
+            </article>
+
+            <article>
+                <span class="number">05</span>
+                <div>
+                    <h2>Гримёрный стол</h2>
+                    <p>Подготовка к съёмке. От 1 часа.</p>
+                </div>
+                <div class="action">
+                    <strong>500 ₸ / час</strong>
+                    <button type="button" data-name="Гримёрный стол" data-price="500" data-min="1">Выбрать</button>
+                </div>
+            </article>
+        </section>
+
+        <p id="notice" class="hint" role="status" aria-live="polite"></p>
+    </main>
+
+    <dialog id="bookingDialog">
+        <form id="bookingForm">
+            <button class="close" type="button" id="closeDialog" aria-label="Закрыть">×</button>
+            <p class="eyebrow">НОВАЯ ЗАЯВКА</p>
+            <h2 id="selectedRoom"></h2>
+            <label>Ваше имя<input id="customer" maxlength="80" required autocomplete="given-name" /></label>
+            <div class="fields">
+                <label>Дата<input id="date" type="date" required /></label>
+                <label>Начало<input id="time" type="time" min="10:00" max="21:00" step="3600" value="10:00" required /></label>
+            </div>
+            <label>Количество часов<input id="hours" type="number" min="1" max="12" step="1" required /></label>
+            <p id="total"></p>
+            <p class="hint">Время работы: 10:00–22:00.</p>
+            <button type="submit" class="submit">Сохранить заявку</button>
+        </form>
+    </dialog>
+
+    <footer>
+        <strong>КАДР</strong>
+        <span>Караганда, Казахстан</span>
+        <a href="tel:8700000000">8700000000</a>
+    </footer>
+</body>
+</html>

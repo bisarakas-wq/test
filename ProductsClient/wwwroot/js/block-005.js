@@ -1,0 +1,20 @@
+t_onReady(function() {
+            var allRecords=document.querySelector('.t-records');
+            window.addEventListener('pageshow',function(event) {
+                if(event.persisted) {
+                    allRecords.classList.add('t-records_visible');
+                }});
+                
+                var rec=document.querySelector('#rec1195441101');
+                if(!rec) return;
+                
+                rec.setAttribute('data-animationappear','off');
+                
+                rec.style.opacity='1';allRecords.classList.add('t-records_animated');
+                setTimeout(function() {
+                    allRecords.classList.add('t-records_visible');},200);
+                    document.addEventListener('visibilitychange',function() {
+                        if(!document.hidden) {
+                            allRecords.classList.add('t-records_visible');
+                        }});});
+         

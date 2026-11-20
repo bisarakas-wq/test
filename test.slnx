@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ProductsClient/ProductsClient.csproj" Id="5277d28e-36f1-41a7-b810-e4d5d10c381c" />
+  <Project Path="Server_ProductsApi/Server_ProductsApi.csproj" Id="4500f85d-bd8d-4780-9d99-96d74384d0c2" />
+</Solution>

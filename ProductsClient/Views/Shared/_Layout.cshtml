@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    @if (ViewData["BaseHref"] is string baseHref)
+    {
+        <base href="@baseHref" />
+    }
+    <title>@ViewData["Title"]</title>
+    @await RenderSectionAsync("HeadContent", required: false)
+    <link rel="stylesheet" href="~/css/site-header.css" />
+    <link rel="stylesheet" href="~/css/site-footer.css" />
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+    <header id="kadr-header" class="site-header"></header>
+    @RenderBody()
+    <partial name="_Footer" />
+    <script src="~/js/site-header.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
